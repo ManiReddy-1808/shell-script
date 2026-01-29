@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e #Shell Script will be checking for errors, if errors it will exit
+
 USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="$LOGS_FOLDER/$0.log"
@@ -31,7 +33,7 @@ do
     if [ $? -ne 0 ]; then
         echo "$package is not installed, installing now :)"
         dnf install $package  -y &>>$LOGS_FILE
-        VALIDATE $? "$package installation"
+        #VALIDATE $? "$package installation"
     else
         echo -e "$package already installed ....$Y SKIPPING $N"
     fi
