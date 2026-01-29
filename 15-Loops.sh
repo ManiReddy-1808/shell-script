@@ -4,11 +4,6 @@ USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="$LOGS_FOLDER/$0.log"
 
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
-
 if [ $USER_ID -gt 0 ]; then
     echo "Please run this script with root user :)" | tee -a $LOGS_FILE
     exit 3;
