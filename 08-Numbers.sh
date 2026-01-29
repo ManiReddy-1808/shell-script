@@ -9,4 +9,4 @@ NAMES=("Mani" "Kanta" "Reddy" "Konuganti")
 
 echo "Name are: ${NAMES[@]}"
 echo "First Name is: ${NAMES[0]}"
-echo "Last Name is: ${NAMES[-2]}"
+echo "Last Name is: ${NAMES[-2]}"  # Negative index start's from last (-4 -3 -2 -1)
