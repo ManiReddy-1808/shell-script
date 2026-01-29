@@ -11,11 +11,12 @@ fi
 
 mkdir -p $LOGS_FOLDER
 
-VALIDATE(){
+# tee command is used to write the output to a file as well as to the console
+VALIDATE(){  
     if [ $1 -eq 0 ]; then
-        echo "$2 ... SUCCESS"
+        echo "$2 ... SUCCESS" | tee -a $LOGS_FILE
     else 
-        echo "$2 ... FAILURE"
+        echo "$2 ... FAILURE" | tee -a $LOGS_FILE
 fi
 }
 
