@@ -2,7 +2,7 @@
 
 USER_ID=$(id -u)
 
-if [ $USER_ID -gt 0 ]
+if [ $USER_ID -gt 0 ]; then
     echo "Please run this script with root user :)"
     exit 3;
 fi
