@@ -2,13 +2,14 @@
 
 NUMBER=$1
 
-if [ $NUMBER -gt 0 ]
+if [ $NUMBER -gt 0 ]; then
     echo "$NUMBER is +ve number"
-elif [ $NUMBER -lt 0 ]
+elif [ $NUMBER -lt 0 ]; then
     echo "$NUMBER is -ve number"
-fi
+else
     echo "$NUMBER is exactly equal's to ZERO"
-    
+fi
+
 # -gt -> greater than
 # -lt -> less than
 # -eq -> equal
