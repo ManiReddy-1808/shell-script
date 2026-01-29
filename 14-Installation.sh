@@ -22,6 +22,6 @@ fi
 
 for package in $@ # Call: sh 14-Install.sh nginx mysql nodejs
 do
-    dnf install $package  -y
+    dnf install $package  -y &>>$LOGS_FILE
     VALIDATE $? "$package installation"
 done
