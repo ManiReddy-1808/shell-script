@@ -22,7 +22,7 @@ fi
 
 for package in $@ # Call: sh 14-Install.sh nginx mysql nodejs
 do
-    dnf list installed $package
+    dnf list installed $package &>>$LOGS_FILE
     if [ $? -ne 0 ]; then
         echo "$package is not installed, installing now :)"
         dnf install $package  -y &>>$LOGS_FILE
