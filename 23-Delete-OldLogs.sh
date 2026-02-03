@@ -1,8 +1,8 @@
 #!/bin/bash
 
-R="\e[31m]"
-G="\e[32m]"
-N="\e[0m]"
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 LOGS_FOLDER=/d/DevSecOps/logs
 LOGS_FILE=$LOGS_FOLDER/$0.log
