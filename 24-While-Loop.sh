@@ -7,3 +7,5 @@ do
     sleep 1
     ((count++))
 done
+
+echo "While loop ended. Happy Coding :)"
