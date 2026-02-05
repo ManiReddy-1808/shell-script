@@ -54,7 +54,7 @@ log "Days: $DAYS"
 if [ -z "${FILES}" ]; then  # -z is to check empty string
     log "No files to Archive ... $Y Skipping $N"
 else
-    log "Files found to Archive:\n $FILES"
+    log "Files found to Archive:\n$FILES"
     TIMESTAMP=$(date +%F-%H-%M-%S)
     ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.tar.gz" #Inside destination folder :: app-logs-2024-06-15-12-30-45.tar.gz
     echo ""
