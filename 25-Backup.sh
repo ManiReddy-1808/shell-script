@@ -52,23 +52,23 @@ log "Destination Directory: $DEST_DIR"
 log "Days: $DAYS"
 
 if [ -z "${FILES}" ]; then  # -z is to check empty string
-    log "No files to archieve ... $Y Skipping $N"
+    log "No files to Archive ... $Y Skipping $N"
 else
-    log "Files found to archieve: $FILES"
+    log "Files found to Archive:\n $FILES"
     TIMESTAMP=$(date +%F-%H-%M-%S)
     ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.tar.gz" #Inside destination folder :: app-logs-2024-06-15-12-30-45.tar.gz
-    log "Archieve name: $ZIP_FILE_NAME"
+    echo ""
+    log "Archive name: $ZIP_FILE_NAME"
     tar -zcvf $ZIP_FILE_NAME $FILES &>>$LOGS_FILE
 
-    # Check archieve is success or not then proceed to delete the source files
+    # Check Archive is success or not then proceed to delete the source files
     if [ -f $ZIP_FILE_NAME ]; then
-        log "Archeival is ... $G SUCCESS $N"
+        log "Archive is ... $G SUCCESS $N"
 
         while IFS= read -r filepath; do
         # Process each line here
-        log "Deleting file: $filepath"
         rm -f $filepath
-        log "Deleted file: $filepath"
+        log "$R Deleted file: $filepath $N"
         done <<< $FILES
     else
         log "Archeival is ... $R FAILURE $N"
