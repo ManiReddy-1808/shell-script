@@ -69,11 +69,6 @@ This section builds strong DevOps fundamentals.
 
 ---
 
-### 🔐 Security Practices
-- Secure user input handling
-- Automatic password generation  
-  (`user_creator.sh`)
-
 ---
 
 ### 🛡️ Reliability
@@ -121,12 +116,3 @@ Automatic:
 ## 🏆 Engineering Standards (Production Ready)
 
 ---
-
-### 🔐 Zero Secrets in Code
-No passwords or hostnames inside scripts ❌
-
-Instead, runtime injection is used:
-
-#### Positional Parameters
-```bash
-sudo sh mysql.sh <db_password>
